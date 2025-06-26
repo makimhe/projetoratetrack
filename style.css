@@ -1,0 +1,131 @@
+body {
+    background-color: #131313;
+}
+/* titulo ratetrack */
+.titulo {
+    position: absolute;
+    top: 1.8%;
+    left: 10%;
+    text-align: center;
+    color: #505cff;
+    opacity: 100%;
+}
+/* direçao dos links */
+ul li {
+    display: inline;
+    margin: 20px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+/* links menu */
+.opcoes a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* links do menu */
+.opcoes{   
+    position: absolute;
+    top: 8%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+}
+/* frases do menu */
+.frases{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.781);
+    text-align: center;
+    font-size: 0.8em;
+    transition: color 1.8s ease-in;
+}
+/* input de pesquisa */
+.pesquisa{
+    position: absolute;
+    top: 6.2%;
+    left: 80%;
+}
+.caixadetxt{
+    border-radius: 15px;
+    width: 170px;
+    height: 20px;
+    background: #353535a9;
+    border: 2px solid #dadadac7;
+    outline: none;
+    color: #ffffff
+    
+}
+.placeholder{
+    color: #ff0000;
+    font-size: 0.8em;
+    font-style: italic;
+    opacity: 0.7;
+}
+/* Lista de itens */
+.items {
+    display: flex;
+    margin-top: 1px;
+    background-color: #1b1b1b67;
+    list-style: none;
+    border-radius: 20px;
+    width: 1100px;
+    padding: 4px;
+    gap: 6px; /* Espaçamento entre os itens */
+    max-height: 290px;
+    overflow-y: auto;
+    border: 1px solid #24242498;
+    margin-left: 60px; /* melhor que position absolute */
+    margin-top: 700px;
+    flex-wrap: wrap;
+    scrollbar-width:none;
+    box-shadow:  0 2px 20px #4b3eff;
+    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    
+}
+
+/* Item individual da lista */
+.item {
+    width: calc(20% - 1px); /* 5 itens por linha (ajustado para o gap) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+/* Imagem do item */
+.item-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Título do item */
+.item-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* Subtítulo do item */
+.item-subtitle {
+    font-size: 12px;
+    color: #cccccc;
+    text-align: center;
+}
+
+/* Descrição do item */
+.item-description {
+    font-size: 14px;
+    color: #aaaaaa;
+    text-align: center;
+}
