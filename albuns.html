@@ -3,28 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escute e Julgue</title>
+    <title>RateTrack</title>
     <link rel="stylesheet" href="albuns.css">
 </head>
 <body>
     <div class="container">
     <header>
         <h1 class="titulos">Álbuns</h1>
-        <nav class="menu-principal">
+        <div class="right-section">
+        <nav class="nevegação">
             <ul>
-            <li><a href="esqueleto.html" class="menu-link">HomeMusic</a></li>
-            <li><a href="contact.html">artists</a></li>
-            <li><a href="conta.html">account</a></li>
+            <li><a href="esqueleto.html" class="menu-link">Home</a></li>
             <li><a href="albuns.html" class="menu-link">Álbuns</a></li>
+            <li><a href="contato.html">Artistas</a></li>
+            <li><a href="conta.html">Conta</a></li>
+            
             </ul>
         </nav>
+         <!-- CONTAINER DA BARRA DE PESQUISA -->
+        <div class="search-container">
+            <!-- INPUT DE TEXTO PARA PESQUISA -->
+            <input type="text" 
+                   placeholder="Pesquisar álbuns..." 
+                   class="search-bar"
+                   aria-label="Campo de pesquisa de álbuns"> <!-- Acessibilidade -->
+            <!-- BOTÃO DE PESQUISA COM ÍCONE SVG -->
+            <button class="search-button" aria-label="Pesquisar">
+                <!-- Ícone de lupa em SVG (sem dependências externas) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </button>
+        </div>
+        </div>
     </header>
     <main class="conteudo-principal">
-        
+        <h2>Avalie e conheça novos albuns de musica que sejam seu estilo</h2>
+        <div class="conteudo">
+        <div class="racionais">
+            <img src="nada_como_um_dia_atras_do_outro.jfif" alt="nada como um dia atras do outro">
+            <h3>Nada como um dia após o outro dia</h3>
+            <p>Racionais <br>Album 2002</p>
+        </div>
+        <div class="gambino">
+            <img src="because_de_internet.jpg" alt="Because the internet">
+            <h3>Beacause the internet</h3>
+            <p>Childsh Gambino <br>Album 2013</p>
+        </div>
+        <div class="novos_baianos">
+            <img src="o_melhor_dos_primeiros_anos.webp" alt="o melhor dos primeiros anos">
+            <h3>O melhor dos primeiros anos</h3>
+            <p>Novos Baianos <br>Album 2016</p>
+        </div>
+        <div class="tim_maia">
+            <img src="tim_maia_1971.webp" alt="Tim maia 1971">
+            <h3>Tim maia 1971</h3>
+            <p>Tim Maia <br>Album 1971</p>
+        </div>
+        <div class="Isadora">
+            <img src="bençãos_que_não_tem_fim.webp" alt="Bençãos que não tem fim">
+            <h3>Bençãos que não tem fim</h3>
+            <p>Isadora Pompeo <br>Album 2023</p>
+        </div>
+        </div>
     </main>
     </div>
     <footer class="rodape">
-        <p class="texto-rodape">Escute e Julgue. Feito por fãs em Barueri, Brasil.&copy; &reg;</p>
+        <p class="texto-rodape">RateTrack. Feito por fãs em Barueri, Brasil.&copy; &reg;</p>
     </footer>    
+    <script src="albuns.js"></script>
 </body>
 </html>
