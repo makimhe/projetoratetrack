@@ -1,131 +1,156 @@
+/* Fonte geral */
 body {
-    background-color: #131313;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a0d2e;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-/* titulo ratetrack */
-.titulo {
-    position: absolute;
-    top: 1.8%;
-    left: 10%;
-    text-align: center;
-    color: #505cff;
-    opacity: 100%;
+
+/* Cabeçalho */
+header {
+  background: #290d47;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/* direçao dos links */
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+button {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #5b21b6;
+}
+
+/* Cards de música */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #2d1847;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+/* Modal geral */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(10, 2, 20, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #3b2070;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Input do login */
+#login-modal input {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Estrelas */
+#stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.star {
+  font-size: 40px;
+  color: #555;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: gold;
+  transform: scale(1.2);
+}
+
+/* Lista do perfil */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 ul li {
-    display: inline;
-    margin: 20px;
-    font-size: 1.1em;
-    font-style: italic;
-}
-/* links menu */
-.opcoes a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+  padding: 5px 0;
+  border-bottom: 1px solid #5d2da7;
+  font-size: 1rem;
 }
 
-/* links do menu */
-.opcoes{   
-    position: absolute;
-    top: 8%;
-    left: 63%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 80%;
-}
-/* frases do menu */
-.frases{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.781);
-    text-align: center;
-    font-size: 0.8em;
-    transition: color 1.8s ease-in;
-}
-/* input de pesquisa */
-.pesquisa{
-    position: absolute;
-    top: 6.2%;
-    left: 80%;
-}
-.caixadetxt{
-    border-radius: 15px;
-    width: 170px;
-    height: 20px;
-    background: #353535a9;
-    border: 2px solid #dadadac7;
-    outline: none;
-    color: #ffffff
-    
-}
-.placeholder{
-    color: #ff0000;
-    font-size: 0.8em;
-    font-style: italic;
-    opacity: 0.7;
-}
-/* Lista de itens */
-.items {
-    display: flex;
-    margin-top: 1px;
-    background-color: #1b1b1b67;
-    list-style: none;
-    border-radius: 20px;
-    width: 1100px;
-    padding: 4px;
-    gap: 6px; /* Espaçamento entre os itens */
-    max-height: 290px;
-    overflow-y: auto;
-    border: 1px solid #24242498;
-    margin-left: 60px; /* melhor que position absolute */
-    margin-top: 700px;
-    flex-wrap: wrap;
-    scrollbar-width:none;
-    box-shadow:  0 2px 20px #4b3eff;
-    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    
-}
-
-/* Item individual da lista */
-.item {
-    width: calc(20% - 1px); /* 5 itens por linha (ajustado para o gap) */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    box-sizing: border-box;
-}
-
-/* Imagem do item */
-.item-image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-/* Título do item */
-.item-title {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 4px;
-    text-align: center;
-}
-
-/* Subtítulo do item */
-.item-subtitle {
-    font-size: 12px;
-    color: #cccccc;
-    text-align: center;
-}
-
-/* Descrição do item */
-.item-description {
-    font-size: 14px;
-    color: #aaaaaa;
-    text-align: center;
+/* Responsivo extra */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .star {
+    font-size: 30px;
+  }
 }

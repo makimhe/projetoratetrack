@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicboxd</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte moderna do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal de login simulado -->
+  <div id="login-modal" class="modal" style="display: flex;">
+    <div class="modal-content">
+      <h2>Bem-vindo ao Musicboxd</h2>
+      <input type="text" id="username" placeholder="Digite seu nome">
+      <button onclick="login()">Entrar</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>🎵 Musicboxd</h1>
+    <button onclick="showProfile()">Meu Perfil</button>
+  </header>
+
+  <main id="artist-list">
+    <!-- Cards gerados pelo JS -->
+  </main>
+
+  <!-- Modal do perfil -->
+  <div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProfile()">&times;</span>
+      <h2>Minhas Avaliações</h2>
+      <ul id="profile-list"></ul>
+    </div>
+  </div>
+
+  <!-- Modal de avaliação -->
+  <div id="rating-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRating()">&times;</span>
+      <h2 id="rating-artist-name"></h2>
+      <div id="stars"></div>
+      <button onclick="submitRating()">Salvar Avaliação</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
