@@ -8,21 +8,22 @@
 <body>
   <header>
     <h1 class="logo">RateTrack</h1>
-     <nav>
+    <nav>
   <a href="musicas.html">musicas</a>
   <a href="albuns.html">albuns</a>
   <a href="artistas.html" class="active">artistas</a>
   <a href="sobre.html">sobre</a>
 </nav>
   </header>
-
   <main>
-    <h2>Artistas</h2>
+    <div class="topo-artistas">
+  <h2>Artistas</h2>
+  <input type="text" id="searchInput" placeholder="Buscar artista...">
+</div>
     <div class="card-container" id="cardContainer">
       <!-- Os cards serao inseridos via JavaScript -->
     </div>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
