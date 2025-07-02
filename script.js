@@ -46,6 +46,8 @@ const container = document.getElementById("cardContainer");
 artistas.forEach(artista => {
   const card = document.createElement("div");
   card.className = "card";
+  card.setAttribute("data-nome", artista.nome);
+
 
   card.innerHTML = `
     <img src="${artista.imagem}" alt="${artista.nome}">
@@ -54,4 +56,15 @@ artistas.forEach(artista => {
   `;
 
   container.appendChild(card);
+});
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('input', () => {
+  const filtro = searchInput.value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const nome = card.getAttribute('data-nome').toLowerCase();
+    card.style.display = nome.includes(filtro) ? 'block' : 'none';
+  });
 });
