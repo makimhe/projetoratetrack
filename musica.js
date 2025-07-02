@@ -25,17 +25,6 @@ const artists = [
     });
   });
   
-  // Login simulado
-  function login() {
-    const input = document.getElementById("username").value.trim();
-    if (input) {
-      username = input;
-      document.getElementById("login-modal").style.display = "none";
-    } else {
-      alert("Digite seu nome!");
-    }
-  }
-  
   // Abrir modal para avaliar
   function openRating(name) {
     currentArtist = name;
