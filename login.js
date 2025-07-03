@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(input => {
         input.addEventListener('focus', function() {
             this.style.borderColor = '#1db954';
-            this.style.boxShadow = '0 0 0 2px rgba(29, 185, 84, 0.2)';
+            this.style.boxShadow = '0 0 0 2px rgba(52, 29, 185, 0.2)';
         });
         
         input.addEventListener('blur', function() {
@@ -140,7 +140,7 @@ style.textContent = `
     
     .success {
         background-color: #e8f5e9;
-        color: #2e7d32;
+        color:rgb(46, 54, 125);
         border: 1px solid #a5d6a7;
     }
     

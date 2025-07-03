@@ -25,17 +25,35 @@ body {
 
 /* HEADER */
 header {
+    background: #0044ff54;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    flex-wrap: wrap;
-    gap: 20px;
+    height: 90px;
+    border-radius: 15px;
+    margin: 20px 10px 0 10px;
+    position: relative;
+    width: 105%;
+    left: -40px;
+    position: relative;
+}
+.menu-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+    left: 6px;
+    position: relative;
+    top: 0px;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .titulos {
     font-style: normal;
-    color: #505cff;
+    color: #ffffff;
     font-size: 1.8em;
 }
 

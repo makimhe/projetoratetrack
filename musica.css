@@ -1,7 +1,7 @@
 /* Fonte geral */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #1a0d2e;
+    background-color: #000000;
     color: #f0f0f0;
     min-height: 100vh;
     display: flex;
@@ -10,20 +10,24 @@ body {
   
   /* Cabeçalho */
   header {
-    background: #290d47;
+    background: #0044ff54;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 15px;
   }
   
   header h1 {
     font-size: 1.5rem;
     font-weight: 600;
   }
-  
+  .sla{
+    left: 220px;
+    position: relative;
+  }
   button {
-    background-color: #7c3aed;
+    background-color:#ffffff54;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -31,10 +35,11 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.2s;
+    
   }
   
   button:hover {
-    background-color: #5b21b6;
+    background-color: #0044ff54;
   }
   
   /* Cards de música */
@@ -46,7 +51,7 @@ body {
   }
   
   .card {
-    background: #2d1847;
+    background: #0044ff54;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -81,7 +86,7 @@ body {
   }
   
   .modal-content {
-    background: #3b2070;
+    background: #0044ff54;
     padding: 20px;
     border-radius: 12px;
     width: 90%;
@@ -128,7 +133,7 @@ body {
   
   ul li {
     padding: 5px 0;
-    border-bottom: 1px solid #5d2da7;
+    border-bottom: 1px solid #0044ff54;
     font-size: 1rem;
   }
   
@@ -145,4 +150,16 @@ body {
       font-size: 30px;
     }
   }
+  .menu-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+    
+    position: relative;
+    top: 1px;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
   
