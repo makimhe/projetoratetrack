@@ -1,14 +1,23 @@
 body {
-    background-color: #141414;
-    
+    background-color: #000000;
 }
+header {
+    background: #0044ff54;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-radius: 15px;
+    top: 30%;
+  }
 /* titulo ratetrack */
 .titulo {
     position: absolute;
     top: 1.8%;
-    left: 10%;
+    left: 5%;
     text-align: center;
-    color:  #0400ff;
+    color:  #ffffff;
     opacity: 100%;
     font-size: 2em;
     font-family: 'Croissant One', sans-serif;
@@ -20,18 +29,18 @@ ul li {
     font-style: italic;
     list-style: none;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    opacity: 80%;
+    opacity: 110%;
 }
 .opcoes {
     position: absolute;
-    top: 8%;
-    left: 80%;
+    top: 7%;
+    left: 85%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
-    opacity: 80%;
+    opacity: 110%;
     list-style: none; 
     padding: 0;
     margin: 0;
@@ -64,31 +73,31 @@ ul li {
 /* Lista de itens */
 .items {
     display: flex;
-    margin-top: 1px;
     background-color: #000000cc;
     list-style: none;
-    border-radius: 29px;
-    width: 1100px;
+    border-radius: 66px;
+    width: 100%;
+    max-width: 1400px;
     padding: 4px;
-    gap: 6px; /* Espaçamento entre os itens */
-    max-height: 290px;
+    gap: 2px; /* reduzido */
+    max-height: 490px;
     overflow-y: auto;
-    border: 2px solid #ffffff;
-    margin-left: 60px; /* melhor que position absolute */
-    margin-top: 700px;
+    border: 0.5px solid #ffffff;
+    margin-left: 80px;
+    margin-top: 800px;
     flex-wrap: wrap;
-    scrollbar-width:none;
-    box-shadow:  0 2px 20px #0400ff;
-    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);   
+    scrollbar-width: none;
+    box-shadow: 2px 1px 60px #0044ff;
+    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 /* Item individual da lista */
 .item {
-    width: calc(19% - 20px); /* 5 itens por linha (ajustado para o gap) */
-    display: flex;
+    flex: 0 1 14%;
+    display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    box-sizing: border-box;
+    gap: 2px;
+    padding: 7px;
 }
 /* Imagem do item */
 .item-image img {
@@ -96,7 +105,7 @@ ul li {
     height: 120px;
     border-radius: 15px;
     object-fit: cover;
-    border: 2px solid #9b9b9ba8;
+    border: 1px solid #ffffff;
 }
 /* Título do item */
 .item-title {
@@ -122,31 +131,30 @@ ul li {
 /* Lista de itens 2 */
 .items2 {
     display: flex;
-    margin-top: 1px;
-    background-color: #000000;
+    background-color: #000000cc;
     list-style: none;
-    border-radius: 110px;
-    width: 1100px;
+    border-radius: 66px;
+    width: 100%;
+    max-width: 1400px;
     padding: 4px;
-    gap: 6px; /* Espaçamento entre os itens */
-    max-height: 200px;
+    gap: 2px; /* reduzido */
+    max-height: 290px;
     overflow-y: auto;
-    border: 2px solid #ffffff;
-    margin-left: 60px; /* melhor que position absolute */
-    margin-top: 150px;
+    border: 0.5px solid #ffffff;
+    margin-left: 80px;
+    margin-top: 200px;
     flex-wrap: wrap;
-    scrollbar-width:none;
-    box-shadow: 0 2px 20px #0400ff;
-    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);   
+    scrollbar-width: none;
+    box-shadow: 2px 1px 60px #0044ff;
+    transition: box-shadow 2.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
 }
-/* Item individual da lista */
 .item2 {
-    width: calc(19% - 20px); /* 5 itens por linha (ajustado para o gap) */
-    display: flex;
+    flex: 0 1 14%;
+    display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    box-sizing: border-box;
+    gap: 2px;
+    padding: 7px;
 }
 /* Imagem do item */
 .item-image2 img {
@@ -154,13 +162,12 @@ ul li {
     height: 120px;
     border-radius: 60px;
     object-fit: cover;
-    border: 2px solid #9b9b9ba8;
+    border: 2px solid #ffffff;
 }
 /* Título do item */
 .item-title2 {
     font-size: 14px;
     color: #ffffff;
-    margin-top: 4px;
     text-align: center;
     font-family: 'Gabriela', serif;
 }
@@ -178,22 +185,39 @@ footer{
 }
 .tituloitem{
     position: absolute;
-    top: 98.7%;
-    left: 49%;
+    top: 109%;
+    left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
     text-align: center;
     font-size: 1em;
-    font-family: honk, sans-serif;
+    font-family: cal sans, serif;
     padding: 3px 6px;
 }
-
-.honk-uniquifier {
-  font-family: "Honk", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 00;
-  font-style: normal;
-  font-variation-settings:
-    "MORF" morph,
-    "SHLN" shadow length;
+.tituloitem2{
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+    font-family: cal sans, serif;
+    padding: 3px 6px;
 }
+.botao {
+    background-color: #ffffffd7;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 77%; /* ajuste conforme necessário */
+    font-family: cal sans, serif;
+}
+
+
